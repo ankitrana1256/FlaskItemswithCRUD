@@ -1,0 +1,21 @@
+{% extends 'homepage.html' %} {% block body %}
+<form method="post">
+    <div class="container">
+        <h1 class="my-3">Submit Your Product</h1>
+        <hr/>
+        <div class="mb-3 my-1">
+            <label for="product" class="form-label">Product Name</label>
+            <input type="text" class="form-control" value="{{prod.product}}" id="product" name="product">
+        </div>
+        <div class="mb-3">
+            <label for="desc" class="form-label">Description</label>
+            <input type="text" class="form-control" value="{{prod.desc}}" id="desc" name="desc">
+        </div>
+        <div class="mb-3">
+            <label for="prod_image" class="form-label">Image address</label>
+            <input type="text" class="form-control" value="{{prod.prod_image}}" id="prod_image" name="prod_image">
+        </div>
+        <button type="submit" class="btn btn-dark">Submit</button>
+    </div>
+</form>
+{% endblock body %}
